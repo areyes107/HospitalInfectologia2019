@@ -1,0 +1,22 @@
+#anchorPaneMedico{
+    -fx-background-color: linear-gradient(to bottom, #FFFFFF, #9BE7FC);
+}
+
+.colorBotonesMedico{
+    -fx-background-color: #f5f5dc;
+}
+
+#estiloTblMedico .cell, #estiloTblMedico .column-header{
+    -fx-background-color: #f5f5dc;
+}
+
+
+#anchorPanePacientes{
+    -fx-background-color: linear-gradient(to bottom, #FFFFFF, #9BE7FC);
+}
+.colorBotonesPaciente{
+    -fx-background-color: #f5f5dc;
+}
+#estiloTblPaciente .cell, #estiloTblPaciente .column-header{
+    -fx-background-color: #f5f5dc;
+}

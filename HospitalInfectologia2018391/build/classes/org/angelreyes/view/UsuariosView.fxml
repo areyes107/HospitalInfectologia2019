@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="anchorPaneRegister" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../resources/Style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.angelreyes.controller.UsuariosController">
+   <children>
+      <Label layoutX="49.0" layoutY="25.0" text="Usuario" />
+      <TextField fx:id="txtUsuario" editable="false" layoutX="108.0" layoutY="21.0" promptText="Ingrese su usuario" />
+      <TextField fx:id="txtContraseña" editable="false" layoutX="108.0" layoutY="54.0" promptText="Ingrese su contraseña" />
+      <Label layoutX="39.0" layoutY="58.0" text="Contraseña" />
+      <Button fx:id="btnExtra" disable="true" layoutX="272.0" layoutY="349.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="68.0" />
+      <Button fx:id="btnEditar" layoutX="198.0" layoutY="349.0" mnemonicParsing="false" onAction="#editar" text="Editar" />
+      <Button fx:id="btnEliminar" layoutX="128.0" layoutY="349.0" mnemonicParsing="false" onAction="#eliminar" text="Eliminar" />
+      <Button fx:id="btnAgregar" layoutX="56.0" layoutY="349.0" mnemonicParsing="false" onAction="#agregar" text="Agregar" />
+      <TableView fx:id="tblUsuario" layoutX="18.0" layoutY="100.0" onMouseClicked="#seleccionarElemento" prefHeight="235.0" prefWidth="560.0">
+        <columns>
+          <TableColumn fx:id="colCodigo" prefWidth="53.0" text="Codigo" />
+          <TableColumn fx:id="colUsuario" prefWidth="99.0" text="Usuario" />
+            <TableColumn fx:id="colContraseña" prefWidth="97.0" text="Contraseña" />
+            <TableColumn fx:id="colEstado" prefWidth="47.0" text="Estado" />
+            <TableColumn fx:id="colFecha" prefWidth="104.0" text="Fecha" />
+            <TableColumn fx:id="colHora" prefWidth="86.0" text="Hora" />
+            <TableColumn fx:id="colTipo" prefWidth="73.0" text="ID Tipo" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnBack30" layoutX="523.0" layoutY="8.0" mnemonicParsing="false" onAction="#butRegresar30" text="Regresar" />
+      <Button fx:id="btnTipoUsuario" layoutX="477.0" layoutY="349.0" mnemonicParsing="false" onAction="#tipoUsuario" prefHeight="25.0" prefWidth="101.0" text="Tipo de Usuario" />
+      <ComboBox fx:id="cmbTipoUsuario" layoutX="355.0" layoutY="50.0" prefWidth="150.0" />
+      <Label layoutX="284.0" layoutY="54.0" text="Tipo Usuario" />
+   </children>
+</AnchorPane>

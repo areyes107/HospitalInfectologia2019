@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.angelreyes.controller.MenuPrincipalController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/foto%20menuPrincipal.jpg" />
+         </image></ImageView>
+      <MenuBar id="estiloMnBarPrincipal" layoutX="311.0" layoutY="-5.0" stylesheets="@../resources/Style.css">
+        <menus>
+          <Menu mnemonicParsing="false" text="Modulos">
+            <items>
+              <MenuItem fx:id="mnPacientes" mnemonicParsing="false" onAction="#cuadroPacientes" text="Pacientes" />
+                  <MenuItem fx:id="mnMedicos" mnemonicParsing="false" onAction="#cuadroMedicos" text="Medicos" />
+                  <MenuItem fx:id="mnEspecialidades" mnemonicParsing="false" onAction="#cuadroEspecialidades" text="Especialidades" />
+                  <MenuItem fx:id="mnAreas" mnemonicParsing="false" onAction="#cuadroAreas" text="Areas" />
+                  <MenuItem fx:id="mnCargos" mnemonicParsing="false" onAction="#cuadroCargos" text="Cargos" />
+                  <MenuItem fx:id="mnHorarios" mnemonicParsing="false" onAction="#cuadroHorarios" text="Horarios" />
+                  <MenuItem fx:id="mnMedicoEspecialidad" mnemonicParsing="false" onAction="#cuadroMedicoEspecialidad" text="Medico-Especialidad" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Reportes">
+            <items>
+              <MenuItem mnemonicParsing="false" text="ReporteCitas" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Ayuda">
+            <items>
+              <MenuItem fx:id="mnItem" mnemonicParsing="false" onAction="#cuadroAcerca" text="Acerca de" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

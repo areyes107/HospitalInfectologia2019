@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="anchorPaneTipoUsuario" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="310.0" prefWidth="600.0" stylesheets="@../resources/Style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.angelreyes.controller.TipoUsuarioController">
+   <children>
+      <TableView fx:id="tblTipoUsuario" layoutX="15.0" layoutY="55.0" prefHeight="200.0" prefWidth="570.0">
+        <columns>
+          <TableColumn fx:id="colCodigo" prefWidth="231.0" text="Codigo Tipo Usuario" />
+          <TableColumn fx:id="colDescripcion" prefWidth="338.0" text="Descripcion" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnBack40" layoutX="523.0" layoutY="14.0" mnemonicParsing="false" onAction="#butRegresar40" text="Regresar" />
+   </children>
+</AnchorPane>

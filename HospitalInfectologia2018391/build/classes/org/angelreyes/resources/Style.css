@@ -1,0 +1,125 @@
+#anchorPaneMedico{
+    -fx-background-color: linear-gradient(to bottom, #FFFFFF, #9BE7FC);
+}
+
+.colorBotonesMedico{
+    -fx-background-color: #f5f5dc;
+}
+
+#estiloTblMedico .column-header{
+    -fx-background-color: #f5f5dc;
+}
+
+
+#anchorPanePacientes{
+    -fx-background-color: linear-gradient(to bottom, #FFFFFF, #9BE7FC);
+}
+.colorBotonesPaciente{
+    -fx-background-color: #f5f5dc;
+}
+#estiloTblPaciente .column-header{
+    -fx-background-color: #f5f5dc;
+}
+
+
+#anchorPaneEspecialidad{
+    -fx-background-color: linear-gradient(to bottom, #FFFFFF, #9BE7FC);
+}
+.colorBotonesEspecialidad{
+    -fx-background-color: #f5f5dc;
+}
+#estiloTblEspecialidad .column-header{
+    -fx-background-color: #f5f5dc;
+}
+
+
+#anchorPaneTelefonoMedico{
+ -fx-background-color: linear-gradient(to bottom, #FFFFFF, #9BE7FC);
+}
+
+.colorBotonesTelefonoMedico{
+    -fx-background-color: #f5f5dc;
+}
+#estiloTblTelefonoMedico .column-header{
+    -fx-background-color: #f5f5dc;
+}
+
+
+#anchorPaneContactoUrgencia{
+    -fx-background-color: linear-gradient(to bottom, #FFFFFF, #9BE7FC);
+}
+
+.colorBotonesContactoUrgencia{
+    -fx-background-color: #f5f5dc;
+}
+
+#estiloTblContactoUrgencia .column-header{
+    -fx-background-color: #f5f5dc;
+}
+
+
+#anchorPaneAreas{
+    -fx-background-color: linear-gradient(to bottom, #FFFFFF, #9BE7FC);
+}
+
+.colorBotonesAreas{
+    -fx-background-color: #f5f5dc;
+}
+
+#estiloTblAreas .column-header{
+    -fx-background-color: #f5f5dc;
+}
+
+#anchorPaneCargos{
+    -fx-background-color: linear-gradient(to bottom, #FFFFFF, #9BE7FC);
+}
+
+.colorBotonesCargos{
+    -fx-background-color: #f5f5dc;
+}
+
+#estiloTblCargos .column-header{
+    -fx-background-color: #f5f5dc;
+}
+
+
+
+#anchorPaneHorarios{
+     -fx-background-color: linear-gradient(to bottom, #FFFFFF, #9BE7FC);
+
+}
+
+.colorBotonesHorarios{
+    -fx-background-color: #f5f5dc;
+}
+
+#estiloTblHorarios{
+    -fx-background-color: #f5f5dc;
+}
+
+
+#anchorPaneLogin {
+    -fx-background-color: linear-gradient(to bottom, #9BE7FC, #FFFFFF);
+}
+
+#anchorPaneRegister{
+    -fx-background-color: linear-gradient(to bottom, #FFFFFF, #9BE7FC);
+}
+
+#anchorPaneTipoUsuario{
+    -fx-background-color: linear-gradient(to bottom, #FFFFFF, #9BE7FC);
+}
+
+
+
+#estiloMnBarPrincipal {
+    -fx-background-color: transparent;
+    -fx-font-size: 18px;
+    -fx-border-color: #f5f5dc;
+}
+
+#estiloMnBarPrincipal .label{
+    -fx-text-fill: #000000;
+}
+
+

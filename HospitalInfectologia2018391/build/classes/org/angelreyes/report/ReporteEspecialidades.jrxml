@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteEspecialidades" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="71334c0d-54aa-4359-afa0-b5772bf9fc43">
+	<property name="ireport.zoom" value="1.1000000000000005"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[call sp_ListarEspecialidades();]]>
+	</queryString>
+	<field name="codigoEspecialidad" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreEspecialidad" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<title>
+		<band height="154">
+			<staticText>
+				<reportElement x="376" y="9" width="185" height="66" uuid="90c4db7a-deda-4181-b686-18463a1723f3"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Black" size="14"/>
+				</textElement>
+				<text><![CDATA[Tu eres tan importante para tu salud como ella lo es para ti ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="95" width="197" height="20" uuid="03068d68-6460-43d3-8579-43305728d9e4"/>
+				<textElement>
+					<font fontName="Arial Black" size="14"/>
+				</textElement>
+				<text><![CDATA[Hospital de infectologia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="234" y="125" width="148" height="24" uuid="db9983bb-bd3b-486b-a16a-f43dac36c4b4"/>
+				<textElement>
+					<font fontName="Arial Black" size="16"/>
+				</textElement>
+				<text><![CDATA[Especialidades]]></text>
+			</staticText>
+			<image>
+				<reportElement x="65" y="9" width="83" height="79" uuid="9306cb96-52a3-49f8-9799-db6aa75b2716"/>
+				<imageExpression><![CDATA["C:\\Users\\programacion\\Documents\\NetBeansProjects\\HospitalInfectologia2018391\\src\\org\\angelreyes\\images\\iconoReporte.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="32" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="0" y="3" width="572" height="25" forecolor="#0033FF" uuid="c10b2a98-6aba-4fdb-a0ad-76c4eb297695"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="382" y="8" width="100" height="20" uuid="562269d2-3c9d-47da-a82c-074dc1781031"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Especialidad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="82" y="8" width="123" height="20" uuid="35a98a50-1f96-45ee-87ca-5aa6e93b6bce"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Codigo de Especialidad]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="34">
+			<textField>
+				<reportElement x="94" y="5" width="100" height="20" uuid="28b64d0e-01b2-42b4-b357-c09a717be250"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{codigoEspecialidad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="345" y="4" width="178" height="20" uuid="435b09b1-b1cf-4bc4-bdc4-c6d6725cbc79"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{nombreEspecialidad}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="29" width="572" height="1" forecolor="#0033FF" uuid="52339806-bf35-431b-ab1d-7e4045249796"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+</jasperReport>

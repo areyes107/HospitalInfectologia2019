@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteFinal" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f4a5e2c3-1c9e-457c-acfa-d8dcece4ec62">
+	<property name="ireport.zoom" value="1.464100000000004"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="codeMedico" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select medicos.codigoMedico, licenciaMedica, medicos.nombres, medicos.apellidos, medicos.horaEntrada, medicos.horaSalida, medicos.turnoMaximo, medicos.sexo, horarios.lunes, horarios.martes, horarios.miercoles, horarios.jueves, horarios.viernes, Especialidades.nombreEspecialidad, medicoEspecialidad.codigoMedicoEspecialidad, pacientes.codigoPaciente, pacientes.nombres as nombresPacientes from
+
+(((((medicos inner join medicoEspecialidad on medicos.codigoMedico = medicoEspecialidad.codigoMedico)
+
+inner join horarios on medicoEspecialidad.codigoHorario = horarios.codigoHorario)
+
+inner join especialidades on medicoEspecialidad.codigoEspecialidad = especialidades.codigoEspecialidad)
+
+inner join turno on medicoEspecialidad.codigoMedicoEspecialidad = turno.codigoMedicoEspecialidad)
+
+inner join pacientes on turno.codigoPaciente = pacientes.codigoPaciente)
+
+
+where medicos.codigoMedico =$P{codeMedico};]]>
+	</queryString>
+	<field name="codigoMedico" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="licenciaMedica" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombres" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="apellidos" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horaEntrada" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horaSalida" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="turnoMaximo" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sexo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lunes" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="martes" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="miercoles" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jueves" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="viernes" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreEspecialidad" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoMedicoEspecialidad" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoPaciente" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombresPacientes" class="java.lang.String"/>
+	<title>
+		<band height="86">
+			<staticText>
+				<reportElement x="334" y="28" width="150" height="27" uuid="fc9eb6a8-1ec3-4405-aee6-347606bf5715"/>
+				<textElement>
+					<font fontName="Arial Black" size="16"/>
+				</textElement>
+				<text><![CDATA[Reporte General ]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="35">
+			<staticText>
+				<reportElement x="0" y="0" width="49" height="20" uuid="11f105d6-a6b4-45f3-b94b-87e2d1ef4d52"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Codigo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="56" y="0" width="74" height="20" uuid="9c8ad771-ff0a-462f-933c-d90798289122"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[licencia Medica]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="135" y="0" width="56" height="20" uuid="d3cc8af6-0626-47b1-8532-9cb879eceaa7"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[nombres]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="198" y="0" width="88" height="20" uuid="a0c592aa-d245-4f5c-839d-c10111bfb614"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[apellidos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="0" width="41" height="20" uuid="296b8324-7716-42e1-ac31-4b7007e6eceb"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Entrada]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="346" y="0" width="39" height="20" uuid="602df94c-25a8-4f1c-bac9-7904dca11676"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Salida]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="402" y="0" width="40" height="20" uuid="95fa4292-d151-4f94-b39d-77d87275bdc0"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[turno]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="449" y="0" width="25" height="20" uuid="23694306-55aa-451a-9334-760ebcf19beb"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[sexo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="612" y="0" width="30" height="20" uuid="4a52491d-74dc-4054-bfd6-dca418a9e99a"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[lunes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="645" y="0" width="34" height="20" uuid="73d45a44-d3e7-44c0-b9e5-4070d151ac64"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[martes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="681" y="0" width="47" height="20" uuid="7d495402-eabf-42e5-97ac-ea013b0335c8"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[miercoles]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="731" y="0" width="33" height="20" uuid="70f9e7ac-e000-48c5-8b15-df205374e126"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[jueves]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="767" y="0" width="35" height="20" uuid="03773f6b-90dc-4afe-b583-f8d37fcafd40"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[viernes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="510" y="0" width="100" height="20" uuid="6bcb41e9-70b0-4c20-b064-2cf2496cde2e"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[nombreEspecialidad]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="24" width="802" height="1" uuid="6208c4d5-7465-4383-8868-3f91cf5cdef0"/>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="802" height="1" uuid="1bea9cea-1ecd-49be-9632-7dfbe10ee173"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="33">
+			<textField>
+				<reportElement x="0" y="0" width="49" height="20" uuid="44ec8279-226c-4b34-9b2d-60a5cbe955d3"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{codigoMedico}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="56" y="0" width="74" height="20" uuid="a1cdb7ce-1080-4e05-92f6-f67db14b0800"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{licenciaMedica}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="135" y="0" width="56" height="20" uuid="e90bb19f-ce25-49cf-8454-e37212093902"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{nombres}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="198" y="0" width="88" height="20" uuid="aab6893e-5b1f-4a8b-9ad2-dbfac921310c"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{apellidos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="290" y="0" width="41" height="20" uuid="e76d4c99-869a-4b5d-929f-8cbdccf983e5"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{horaEntrada}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="346" y="0" width="39" height="20" uuid="5d361fe1-62b2-45bb-8a08-3c70979236ef"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{horaSalida}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="402" y="0" width="40" height="20" uuid="292e5f6c-c00d-4a4d-a4dc-b3fcc0898e65"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{turnoMaximo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="449" y="0" width="25" height="20" uuid="0911f9a0-e5f1-48bf-a3e2-6f83618f36e0"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{sexo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="612" y="0" width="30" height="20" uuid="b1436d86-6ed5-4046-aa18-400e13755347"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{lunes}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="645" y="0" width="34" height="20" uuid="b902e7e6-7b3c-4301-80ca-f1a8dafdebeb"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{martes}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="681" y="0" width="47" height="20" uuid="ced53b42-b644-45e9-940c-3339e31aae50"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{miercoles}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="731" y="0" width="33" height="20" uuid="3708d9d9-39f5-40a4-939a-7fb9e97f0a8b"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{jueves}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="767" y="0" width="35" height="20" uuid="bf66451e-3582-4226-af55-8b0be88d5d2d"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{viernes}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="510" y="1" width="100" height="20" uuid="4c027e98-adc0-423f-baa5-2db49ab3c3ec"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{nombreEspecialidad}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="25" width="802" height="1" uuid="8f5a9c0c-3031-4a4a-80af-94e3b85d73fa"/>
+			</line>
+		</band>
+		<band height="57">
+			<staticText>
+				<reportElement x="0" y="5" width="100" height="20" uuid="acbce441-02f8-4ab1-9bb9-463783960bca"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[nombres Pacientes]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="25" width="100" height="20" uuid="d4001828-0f57-448f-aeed-507bf023b842"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{nombresPacientes}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="2" width="802" height="1" uuid="a2e9486c-27e6-4293-879c-2dac2136e561"/>
+			</line>
+			<line>
+				<reportElement x="0" y="50" width="802" height="1" uuid="d0014cec-70b4-42c8-a6b0-c30e81dcc7e6"/>
+			</line>
+		</band>
+	</detail>
+</jasperReport>

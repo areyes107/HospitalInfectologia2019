@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="anchorPaneContactoUrgencia" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="686.0" stylesheets="@../resources/Style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.angelreyes.controller.ContactoUrgenciaController">
+   <children>
+      <Label layoutX="194.0" layoutY="38.0" text="Contacto de Urgencia">
+         <font>
+            <Font name="Arial Black" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="87.0" layoutY="101.0" text="Nombres">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNombres" editable="false" layoutX="163.0" layoutY="99.0" prefHeight="25.0" prefWidth="370.0" />
+      <Button fx:id="btnBack7" layoutX="569.0" layoutY="18.0" mnemonicParsing="false" onAction="#butRegresar7" prefHeight="40.0" prefWidth="103.0" styleClass="colorBotonesContactoUrgencia" text="Regresar">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tblContactoUrgencia" layoutX="33.0" layoutY="233.0" onMouseClicked="#seleccionarElemento" prefHeight="243.0" prefWidth="625.0">
+         <columns>
+            <TableColumn fx:id="colCodigoContactoUrgencia" prefWidth="170.0" text="codigo Contacto Urgencia" />
+            <TableColumn fx:id="colNombres" prefWidth="102.0" text="Nombres" />
+            <TableColumn fx:id="colApellidos" prefWidth="115.0" text="Apellidos" />
+            <TableColumn fx:id="colTelefono" prefWidth="110.0" text="Telefono" />
+            <TableColumn fx:id="colCodigoPaciente" prefWidth="127.0" text="Codigo Paciente" />
+         </columns>
+      </TableView>
+      <Label layoutX="87.0" layoutY="135.0" text="Apellidos">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="87.0" layoutY="164.0" text="Telefono">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtApellidos" editable="false" layoutX="163.0" layoutY="133.0" prefHeight="25.0" prefWidth="370.0" />
+      <TextField fx:id="txtTelefono" editable="false" layoutX="163.0" layoutY="162.0" prefHeight="25.0" prefWidth="370.0" />
+      <Label layoutX="39.0" layoutY="198.0" text="Codigo del Paciente">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnNuevo" layoutX="39.0" layoutY="486.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="40.0" prefWidth="103.0" styleClass="colorBotonesContactoUrgencia" text="NUEVO" />
+      <Button fx:id="btnEliminar" layoutX="151.0" layoutY="486.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="40.0" prefWidth="103.0" styleClass="colorBotonesContactoUrgencia" text="ELIMINAR" />
+      <Button fx:id="btnEditar" layoutX="262.0" layoutY="486.0" mnemonicParsing="false" onAction="#editar" prefHeight="40.0" prefWidth="103.0" styleClass="colorBotonesContactoUrgencia" text="EDITAR" />
+      <Button fx:id="btnReporte" layoutX="369.0" layoutY="486.0" mnemonicParsing="false" onAction="#generarReporte" prefHeight="40.0" prefWidth="103.0" styleClass="colorBotonesContactoUrgencia" text="REPORTE" />
+      <ComboBox fx:id="cmbCodigoPaciente" layoutX="203.0" layoutY="196.0" prefWidth="150.0" styleClass="colorBotonesContactoUrgencia" />
+   </children>
+</AnchorPane>

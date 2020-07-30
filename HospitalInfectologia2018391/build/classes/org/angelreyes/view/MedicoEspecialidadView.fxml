@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="492.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.angelreyes.controller.MedicoEspecialidadController">
+   <children>
+      <Label layoutX="40.0" layoutY="72.0" prefHeight="33.0" prefWidth="97.0" text="Codigo Medico">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="39.0" layoutY="141.0" prefHeight="33.0" prefWidth="97.0" text="Codigo Horario">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="39.0" layoutY="105.0" prefHeight="33.0" prefWidth="110.0" text="Codigo Especialidad">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbCodigoMedico" layoutX="168.0" layoutY="76.0" prefWidth="150.0" />
+      <ComboBox fx:id="cmbCodigoEspecialidad" layoutX="168.0" layoutY="109.0" prefWidth="150.0" />
+      <ComboBox fx:id="cmbCodigoHorario" layoutX="168.0" layoutY="145.0" prefWidth="150.0" />
+      <TableView fx:id="tblMedicoEspecialidad" layoutX="37.0" layoutY="207.0" onMouseClicked="#seleccionarElemento" prefHeight="222.0" prefWidth="521.0">
+        <columns>
+          <TableColumn fx:id="colCodigo" prefWidth="122.0" text="Codigo " />
+          <TableColumn fx:id="colCodigoMedico" prefWidth="129.0" text="Codigo Medico" />
+            <TableColumn fx:id="colCodigoEspecialidad" prefWidth="136.0" text="Codigo Especialidad" />
+            <TableColumn fx:id="colCodigoHorario" prefWidth="133.0" text="Codigo Horario" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnReporte" layoutX="344.0" layoutY="439.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="96.0" text="REPORTE" />
+      <Button fx:id="btnEditar" layoutX="240.0" layoutY="439.0" mnemonicParsing="false" onAction="#editar" prefHeight="39.0" prefWidth="96.0" text="EDITAR" />
+      <Button fx:id="btnEliminar" layoutX="133.0" layoutY="439.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="39.0" prefWidth="96.0" text="ELIMINAR" />
+      <Button fx:id="btnNuevo" layoutX="29.0" layoutY="439.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="39.0" prefWidth="96.0" text="NUEVO" />
+      <Button fx:id="btnBack21" layoutX="482.0" layoutY="26.0" mnemonicParsing="false" onAction="#butRegresar21" prefHeight="21.0" prefWidth="104.0" styleClass="onoMedico" text="Regresar">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="180.0" layoutY="26.0" text="Medico - Especialidad">
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

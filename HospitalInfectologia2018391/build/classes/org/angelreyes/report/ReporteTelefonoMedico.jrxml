@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteTelefonoMedico" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="22ff2620-ed24-465b-8995-9503cb11e6f2">
+	<property name="ireport.zoom" value="1.3310000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[call sp_ListarTelefonosMedicos();]]>
+	</queryString>
+	<field name="codigoTelefonoMedico" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefonoPersonal" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefonoTrabajo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoMedico" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<title>
+		<band height="79">
+			<staticText>
+				<reportElement x="380" y="7" width="185" height="66" uuid="d74741e4-c76a-4eab-9fda-254cea36f284"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Black" size="14"/>
+				</textElement>
+				<text><![CDATA[Tu eres tan importante para tu salud como ella lo es para ti ]]></text>
+			</staticText>
+			<image>
+				<reportElement x="60" y="0" width="83" height="79" uuid="d280b214-47fd-4e25-9f50-bf9fec907524"/>
+				<imageExpression><![CDATA["C:\\Users\\programacion\\Documents\\NetBeansProjects\\HospitalInfectologia2018391\\src\\org\\angelreyes\\images\\iconoReporte.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="65">
+			<staticText>
+				<reportElement x="5" y="4" width="197" height="20" uuid="2e621a87-3796-4c73-acab-be3c8d91f403"/>
+				<textElement>
+					<font fontName="Arial Black" size="14"/>
+				</textElement>
+				<text><![CDATA[Hospital de infectologia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="188" y="34" width="202" height="24" uuid="7844e4cf-44b6-4467-81b2-7dfc69654a12"/>
+				<textElement>
+					<font fontName="Arial Black" size="16"/>
+				</textElement>
+				<text><![CDATA[Telefonos de Medicos]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="35">
+			<rectangle radius="10">
+				<reportElement x="0" y="5" width="571" height="25" forecolor="#0033FF" uuid="4a80d989-712b-405f-a1dd-f2b7f9dae11a"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="11" y="7" width="121" height="20" uuid="4fbe94c7-15af-4d24-a178-d4a42c960282"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Codigo de Telefono Medico]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="166" y="7" width="100" height="20" uuid="85d967cb-e416-4898-8043-1dbfe3655449"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Telefono Personal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="309" y="7" width="100" height="20" uuid="d7597c45-e73b-4916-986e-e05e378625f0"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Telefono de Trabajo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="454" y="8" width="100" height="20" uuid="f0df9849-942b-47aa-a725-cff4360f33e5"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Codigo de Medico]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="26" width="572" height="1" forecolor="#0033FF" uuid="1348d7de-dc22-49bd-8153-bc42a4fb945c"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="11" y="2" width="121" height="20" uuid="dc44597d-5fe9-4dfc-97ae-64861a3755f3"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{codigoTelefonoMedico}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="166" y="2" width="100" height="20" uuid="4f07fea3-bb06-4e6f-9193-8aa0dbe232e1"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{telefonoPersonal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="309" y="2" width="100" height="20" uuid="c93a69a0-bb4c-432a-87b1-469541b08c34"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{telefonoTrabajo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="454" y="2" width="100" height="20" uuid="cb206920-db58-4287-a409-59c30ff19413"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{codigoMedico}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteAreas" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="58a218a0-3b4a-43d8-bd7e-59b0593d72c7">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[call sp_ListarAreas();]]>
+	</queryString>
+	<field name="codigoArea" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreArea" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="380" y="7" width="185" height="66" uuid="1ef5f9da-82b7-4d4b-a611-3935af6b9465"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Black" size="14"/>
+				</textElement>
+				<text><![CDATA[Tu eres tan importante para tu salud como ella lo es para ti ]]></text>
+			</staticText>
+			<image>
+				<reportElement x="67" y="0" width="83" height="79" uuid="ad3145e8-6a7a-46ad-8947-c894d378adf3"/>
+				<imageExpression><![CDATA["C:\\Users\\programacion\\Documents\\NetBeansProjects\\HospitalInfectologia2018391\\src\\org\\angelreyes\\images\\iconoReporte.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="66" splitType="Stretch">
+			<staticText>
+				<reportElement x="14" y="5" width="197" height="20" uuid="169683cf-3712-4781-a43a-b7e785c998d5"/>
+				<textElement>
+					<font fontName="Arial Black" size="14"/>
+				</textElement>
+				<text><![CDATA[Hospital de infectologia]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="37" splitType="Stretch">
+			<staticText>
+				<reportElement x="260" y="-30" width="57" height="24" uuid="3837ff37-87f5-46fa-986c-d39c3c2d10cd"/>
+				<textElement>
+					<font fontName="Arial Black" size="16"/>
+				</textElement>
+				<text><![CDATA[Areas]]></text>
+			</staticText>
+			<rectangle radius="10">
+				<reportElement x="0" y="5" width="571" height="25" forecolor="#0033FF" uuid="6fdc262d-5a1e-4bcc-ab90-441db19192dd"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="96" y="8" width="100" height="20" uuid="6f242da9-5234-474f-a4a6-35da6958e633"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Codigo de Area]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="384" y="8" width="100" height="20" uuid="bdce9175-6838-4835-99a1-3f3c4358a199"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Nombre de Area]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="34" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="29" width="572" height="1" forecolor="#0033FF" uuid="933225ef-46c7-4d2b-bad3-aad65deb67d7"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="96" y="5" width="100" height="20" uuid="79784a85-10ec-4a4f-8153-bf3fde1174c4"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{codigoArea}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="384" y="5" width="100" height="20" uuid="84b2fa75-6e88-4e62-a515-1812b431fe53"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{nombreArea}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
